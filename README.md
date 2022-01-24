@@ -47,6 +47,12 @@ Our test programs currently support input files encoded using the matrix market 
 ## Release version
 Oct 19,2021 Version Alpha
 
+## Contact us
+
+Yuyao Niu
+E-mail: 2019211256@student.cup.edu.cn
+
+
  
 
 
