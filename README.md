@@ -2,7 +2,7 @@
 
  
 
-**TileSpMV** is an open source code that uses a tiled structure to optimize sparse matrix-vector multiplication(SpMV) on GPUs. 
+**TileSpMV** is an open source code that uses a tiled structure to optimize sparse matrix-vector multiplication (SpMV) on GPUs. 
 
 
 -------------------
