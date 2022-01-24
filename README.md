@@ -10,6 +10,11 @@
 
 Yuyao Niu, Zhengyang Lu, Meichen Dong, Zhou Jin, Weifeng Liu and Guangming Tan, "TileSpMV: A Tiled Algorithm for Sparse Matrix-Vector Multiplication on GPUs," 2021 IEEE International Parallel and Distributed Processing Symposium (IPDPS), 2021, pp. 68-78, DOI: https://doi.org/10.1109/IPDPS49936.2021.00016.
 
+## Contact us
+
+Yuyao Niu
+
+E-mail: 2019211256@student.cup.edu.cn
 
 ## Introduction
 
@@ -47,11 +52,7 @@ Our test programs currently support input files encoded using the matrix market 
 ## Release version
 Oct 19,2021 Version Alpha
 
-## Contact us
 
-Yuyao Niu
-
-E-mail: 2019211256@student.cup.edu.cn
 
 
  
