@@ -12,7 +12,7 @@ Yuyao Niu, Zhengyang Lu, Meichen Dong, Zhou Jin, Weifeng Liu and Guangming Tan, 
 
 ## Contact us
 
-Yuyao Niu
+If you have any questions about running the code, please contact Yuyao Niu. 
 
 E-mail: yuyao.niu.phd@gmail.com
 
