@@ -14,7 +14,7 @@ Yuyao Niu, Zhengyang Lu, Meichen Dong, Zhou Jin, Weifeng Liu and Guangming Tan, 
 
 Yuyao Niu
 
-E-mail: 2019211256@student.cup.edu.cn
+E-mail: niuyuyao0804@gmail.com
 
 ## Introduction
 
