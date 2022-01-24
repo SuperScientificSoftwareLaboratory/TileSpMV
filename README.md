@@ -8,7 +8,7 @@
 -------------------
 ## Paper Information
 
-Y. Niu, Z. Lu, M. Dong, Z. Jin, W. Liu and G. Tan, "TileSpMV: A Tiled Algorithm for Sparse Matrix-Vector Multiplication on GPUs," 2021 IEEE International Parallel and Distributed Processing Symposium (IPDPS), 2021, pp. 68-78, DOI: 10.1109/IPDPS49936.2021.00016.
+Yuyao Niu, Zhengyang Lu, Meichen Dong, Zhou Jin, Weifeng Liu and Guangming Tan, "TileSpMV: A Tiled Algorithm for Sparse Matrix-Vector Multiplication on GPUs," 2021 IEEE International Parallel and Distributed Processing Symposium (IPDPS), 2021, pp. 68-78, DOI: http://10.1109/IPDPS49936.2021.00016.
 
 ## Introduction
 
