@@ -19,9 +19,6 @@ void encode_new(INDEX_DATA_TYPE *str1, INDEX_DATA_TYPE *str2, INDEX_DATA_TYPE *r
 
 void decode_new(INDEX_DATA_TYPE *str1, INDEX_DATA_TYPE *str2, INDEX_DATA_TYPE *res, int res_len)
 {
-    INDEX_DATA_TYPE num_f = 240;
-    INDEX_DATA_TYPE num_b = 15;
-
     for (int i = 0; i < res_len; i++)
     {
         str1[i] = (res[i] & num_f) >> 4;
@@ -54,8 +51,6 @@ void encode(INDEX_DATA_TYPE *str, INDEX_DATA_TYPE *res, int str_len,int offset)
 
 void decode(INDEX_DATA_TYPE *str, INDEX_DATA_TYPE *res, int res_len)
 {
-    INDEX_DATA_TYPE num_f = 240;
-    INDEX_DATA_TYPE num_b = 15;
 
     if (res_len % 2 == 0)
     {

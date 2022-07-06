@@ -8,8 +8,6 @@
 
 #include "common.h"
 
-#include"utils.h"
-
 
 
 // read matrix infomation from mtx file
