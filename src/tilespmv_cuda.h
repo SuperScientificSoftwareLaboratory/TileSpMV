@@ -596,26 +596,29 @@ void call_tilespmv_cuda(char *filename,
     cudaMemcpy(d_x, x, colA * sizeof(MAT_VAL_TYPE), cudaMemcpyHostToDevice);
 
     // CSR5
+
     int err = 0;
     cudaError_t err_cuda = cudaSuccess;
     double gflop = getFLOP<int>(nnzA);
-
     anonymouslibHandle<int, unsigned int, MAT_VAL_TYPE> A(rowA, colA);
-    err = A.inputCSR(coototal, d_deferredcoo_ptr, d_deferredcoo_colidx, d_deferredcoo_val);
+    if (coototal != 0)
+    {
 
-    err = A.setX(d_x);
+        err = A.inputCSR(coototal, d_deferredcoo_ptr, d_deferredcoo_colidx, d_deferredcoo_val);
 
-    A.setSigma(ANONYMOUSLIB_AUTO_TUNED_SIGMA);
+        err = A.setX(d_x);
 
-    // warmup device
-    A.warmup();
+        A.setSigma(ANONYMOUSLIB_AUTO_TUNED_SIGMA);
 
-    anonymouslib_timer asCSR5_timer;
-    asCSR5_timer.start();
+        // warmup device
+        A.warmup();
 
-    err = A.asCSR5();
-    double csr2csr5 = asCSR5_timer.stop();
+        anonymouslib_timer asCSR5_timer;
+        asCSR5_timer.start();
 
+        err = A.asCSR5();
+        double csr2csr5 = asCSR5_timer.stop();
+    }
     int *d_coodeferoffset;
     int *d_deferbuf_coooff;
     int *d_deferbuf_dxoff;
@@ -652,7 +655,8 @@ void call_tilespmv_cuda(char *filename,
                                                               d_x, d_y, 7, d_coodeferoffset, d_deferbuf_coooff, d_deferbuf_dxoff);
 
         // call csr5
-        err = A.spmv(alpha, d_y);
+        if (coototal != 0)
+            err = A.spmv(alpha, d_y);
     }
     cudaDeviceSynchronize();
 
@@ -678,8 +682,8 @@ void call_tilespmv_cuda(char *filename,
                                                               d_ptroffset1, d_ptroffset2,
                                                               rowblkblock, d_blkcoostylerowidx, d_blkcoostylerowidx_colstart, d_blkcoostylerowidx_colstop,
                                                               d_x, d_y, 7, d_coodeferoffset, d_deferbuf_coooff, d_deferbuf_dxoff);
-
-        err = A.spmv(alpha, d_y);
+        if (coototal != 0)
+            err = A.spmv(alpha, d_y);
         cudaDeviceSynchronize();
         gettimeofday(&t2, NULL);
         time_cuda_spmv_base += (t2.tv_sec - t1.tv_sec) * 1000.0 + (t2.tv_usec - t1.tv_usec) / 1000.0;
