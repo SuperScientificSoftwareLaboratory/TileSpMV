@@ -18,7 +18,7 @@
 #endif
 
 #ifndef WARMUP_NUM
-#define WARMUP_NUM 300
+#define WARMUP_NUM 4000
 #endif
 
 
