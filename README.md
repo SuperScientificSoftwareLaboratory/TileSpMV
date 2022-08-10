@@ -32,7 +32,7 @@ beidoublas/Makefile   Makefile that does installation and testing
 ## Installation
 
 <!-- To use this code, you need to modify the Makefile with correct g++ installation path and use make for automatic installation. -->
-NVIDIA GPU with compute capability at least 3.5 (NVIDIA Tesla K40 as tested) * NVIDIA nvcc CUDA compiler and cuSPARSE library, both of which are included with CUDA Toolkit (CUDA v11.4 as tested) 
+NVIDIA GPU with compute capability at least 3.5 (NVIDIA Tesla K40 as tested) * NVIDIA nvcc CUDA compiler and cuSPARSE library, both of which are included with CUDA Toolkit (CUDA v11.1 as tested) 
 The GPU test programs have been tested on Ubuntu 18.04/20.04, and are expected to run correctly under other Linux distributions.
 
 ## Execution of TileSpMV
